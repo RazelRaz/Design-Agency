@@ -1,4 +1,5 @@
 "use client"
+import styles from './components.module.css'
 
 const SiteNavbar = () => {
     return (
