@@ -1,6 +1,45 @@
+/* Default CSS */
 
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
+a {
+  color: unset;
+  text-decoration: none;
+}
 
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1239px;
+  margin: 0 auto;
+}
+
+.active {
+  color: #69ed91 !important;
+}
+
+.my-color {
+  color: red;
+}
 
 /* :root {
   --max-width: 1100px;
