@@ -6,10 +6,17 @@ import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Design Agency',
-  description: 'A Design Agency Web Application - NextJs 13, REST API, SEO Friendly',
+
+
+// Dynamic metadata
+export async function generateMetadata(){
+  // SEO Data Fetch
+  return {
+    title: 'Design Agency',
+    description: 'A Design Agency Web Application - NextJs 13, REST API, SEO Friendly',
+  }
 }
+
 
 export default function RootLayout({ children }) {
   return (
