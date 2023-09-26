@@ -111,7 +111,8 @@
     background: linear-gradient(180deg, #D7F5DC 0%, #D7F5DC 100%);
     width: 100%;
     padding-top: 69px;
-    padding-bottom: 150px;
+    padding-bottom: 80px;
+    position: relative;
 }
 
 .heroArea .content {
@@ -173,8 +174,30 @@
 }
 
 
+/***********************************************
+              Brands
+ *********************************************/
+.brandsArea {
+    background:#fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position:relative;
+    border-bottom: 34px solid;
+    border-color:  #D7F5DC;
+}
 
+.brandsAreaImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
 
+.brandsAreaImages img {
+    width: 114.29px;
+height: 29.108px;
+object-fit: contain;
+}
 
 
 
@@ -223,6 +246,13 @@
         height: auto;
     }
 
+
+    /* Brands area */
+    .brandsAreaImages {
+        gap: 50px;
+
+    }
+
     
 
  }
@@ -258,6 +288,18 @@
 
     .heroArea .content {
         gap: 45px;
+    }
+
+    .brandsAreaImages {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .brandsAreaImages img {
+        width: auto;
     }
 
     

@@ -2,10 +2,12 @@
 import styles from './components.module.css'
 import Image from 'next/image';
 import LogoImg from '../../public/images/DesignAGENCY.png'
+
 import { usePathname } from 'next/navigation'
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from "react-icons/fa";
+
 const SiteNavbar = () => {
 
     let currentPath = usePathname();
@@ -34,7 +36,8 @@ const SiteNavbar = () => {
                             
                         </ul>
                     </div>
-                    <div className={styles.mobMenu}>
+                </div>
+                <div className={styles.mobMenu}>
                         <p><FaBars ></FaBars></p>
                         <ul className={styles.mobMenuLinks}>
                             <Link href={"/services"}>services</Link>
@@ -43,7 +46,6 @@ const SiteNavbar = () => {
                             <Link href={"#"}>Login</Link>
                             <Link href={"#"}>Sign Up</Link>
                         </ul>
-                    </div>
                 </div>
             </div>
         </nav>
