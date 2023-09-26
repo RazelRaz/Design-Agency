@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <NextTopLoader color="#D7F5DC" height={3} speed={200}/>
+        <NextTopLoader color="#ccc" height={3} speed={200}/>
         <SiteNavbar></SiteNavbar>
         {children}
         <Footer></Footer>
