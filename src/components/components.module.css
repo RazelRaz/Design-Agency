@@ -231,12 +231,57 @@ object-fit: contain;
 }
 
 
+.workLists {
+    margin-top: 40px;
+    display: flex;
+    gap:45px;
+}
+
+.singleWorkListBox img {
+    width: 93px;
+    height: 93px;
+}
+
+.singleWorkListBox {
+    padding: 50px 30px;
+}
 
 
+.singleWorkListBox h2 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 14px;
+}
 
+.singleWorkListBox p {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 15px;
+}
 
+.singleWorkListLink {
+    margin-top: 43px;
 
+    
+}
 
+.singleWorkListLink a {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.singleWorkListLink a svg{
+    margin-left: 10px;
+}
 
 
 
@@ -297,6 +342,19 @@ object-fit: contain;
 
     }
 
+    /* work list */
+
+    .themeTitleBox h2 {
+        width: 100%;
+    }
+
+    .singleWorkListBox {
+        padding: 33px 16px;
+    }
+
+    .workLists {
+        gap: 30px;
+    }
     
 
  }
@@ -344,6 +402,14 @@ object-fit: contain;
 
     .brandsAreaImages img {
         width: auto;
+    }
+
+
+    
+    /* workLists */
+
+    .workLists {
+        flex-direction: column;
     }
 
     
