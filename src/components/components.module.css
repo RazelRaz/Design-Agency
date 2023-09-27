@@ -384,6 +384,7 @@ object-fit: contain;
  *********************************************/
 .subscribeArea {
     padding-top: 91px;
+    padding-bottom: 137px;
 }
 
 .subscribeArea .themeTitleBox  {
@@ -410,6 +411,7 @@ object-fit: contain;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .subscribeBox {
@@ -417,20 +419,25 @@ object-fit: contain;
 }
 
 .form {
-    position: relative;
+    /* position: relative; */
 }
 
 .formSubs input {
     border: none;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: 596px;
+    padding: 20px 16px;
+    border-radius: 14px;
+    border: 1px solid #000;
+    
 }
 
 .formSubs button {
     border-radius: 14px;
     background: #F55F1D;
-    padding: 8px 24px;
+    padding: 14px 24px;
     color: #fff;
+    position: absolute;
+    right: 329px;
 }
 
 /***********************************************
@@ -531,6 +538,12 @@ object-fit: contain;
         margin-top: 50px;
     }
 
+
+    /* subscribe Area */
+    .formSubs button {
+        right: 83px;
+    }
+
  }
 
 
@@ -586,6 +599,10 @@ object-fit: contain;
         flex-direction: column;
     }
 
+    /* subscribe Area */
+    .formSubs button {
+        right: 8px;
+    }
     
 
 }
