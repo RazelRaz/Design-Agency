@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './components.module.css'
 import Image from 'next/image';
 import FProject1 from '../../public/images/fproject.jpg'
