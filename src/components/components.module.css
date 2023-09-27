@@ -440,6 +440,75 @@ object-fit: contain;
     right: 329px;
 }
 
+
+
+/***********************************************
+              footer Area
+ *********************************************/
+
+.footerArea {
+    background: #000;
+    padding-top: 80px;
+}
+
+.footerLogo img  {
+    width: 246px;
+    height: auto;
+}
+
+.footerTop p {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+}
+
+.footerTop img {
+    width: 210px;
+    height: auto;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.footerMiddleBox {
+
+}
+
+.footerMiddleBox h6{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.footerMiddleBox ul {
+    margin-top: 16px;
+}
+
+.footerMiddleBox ul li {
+    color: #FFF;
+font-size: 18px;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 25px;
+cursor: pointer;
+}
+
+.footerMiddleBox p {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+}
+
+.footerBox {
+    
+}
+
+
+
 /***********************************************
             Media query
  *********************************************/
