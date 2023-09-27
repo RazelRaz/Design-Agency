@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Active from '../../public/images/activity.png'
 import Heart from '../../public/images/heart.png'
 import Work from '../../public/images/work.png'
-import Arrow from '../../public/images/arrow.png'
 import Link from 'next/link';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 

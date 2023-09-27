@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './components.module.css'
 import Image from 'next/image';
 import HeroOne from '../../public/images/hero1.png'
@@ -6,7 +5,7 @@ import HeroTwo from '../../public/images/hero2.png'
 import HeroThree from '../../public/images/hero3.png'
 import HeroFour from '../../public/images/hero4.png'
 import Link from 'next/link';
-import { FaBars, FaTimes } from "react-icons/fa";
+
 
 const Hero = () => {
     return (
@@ -17,7 +16,7 @@ const Hero = () => {
                         <h1>Increase Your Customers Loyalty and Satisfaction</h1>
                         <p>We help businesses like yours earn more customers, standout from competitors, make more money</p>
                         <div className={styles.heroBtn}>
-                            <Link href={'/services'}>Get Started <FaBars ></FaBars></Link>
+                            <Link href={'/services'}>Get Started </Link>
                         </div>
                     </div>
                     <div className={styles.heroAreaRight}>
