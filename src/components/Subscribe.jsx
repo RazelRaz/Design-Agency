@@ -14,10 +14,10 @@ const Subscribe = () => {
                 </div>
                 <div className={styles.contentSubs}>
                     <div className={styles.subscribeBox}>
-                        <form action="" className={styles.formSubs}>
+                        <div className={styles.formSubs}>
                             <input type="text" placeholder='Enter Your Email Adress' />
                             <button>Subscribe</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
