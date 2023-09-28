@@ -449,6 +449,7 @@ object-fit: contain;
 .footerArea {
     background: #000;
     padding-top: 80px;
+    padding-bottom: 30px;
 }
 
 .footerLogo img  {
@@ -501,12 +502,24 @@ cursor: pointer;
     font-weight: 400;
     line-height: normal;
     margin-top: 20px;
+
 }
 
 .footerBox {
-    
+    display: flex;
+    justify-content: space-between;
 }
 
+.copyFoot {
+    padding-top: 80px;
+}
+
+.copyFoot p {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+}
 
 
 /***********************************************
@@ -612,6 +625,12 @@ cursor: pointer;
     .formSubs button {
         right: 83px;
     }
+
+    .footerBox {
+        flex-direction: column;
+        gap: 55px;
+    }
+    
 
  }
 
