@@ -98,6 +98,7 @@
     padding: 10px;
     color: white;
     width: 25%;
+    z-index: 9999999;
   }
 
   .mobMenuLinks a {
@@ -629,6 +630,11 @@ cursor: pointer;
     .footerBox {
         flex-direction: column;
         gap: 55px;
+    }
+
+    .mobMenu {
+        float: right;
+        margin-top: -18px;
     }
     
 

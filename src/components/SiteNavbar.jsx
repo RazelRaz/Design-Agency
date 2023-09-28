@@ -38,14 +38,14 @@ const SiteNavbar = () => {
                     </div>
                 </div>
                 <div className={styles.mobMenu}>
-                        <p><FaBars ></FaBars></p>
-                        <ul className={styles.mobMenuLinks}>
-                            <Link href={"/services"}>services</Link>
-                            <Link href={"/projects"}>projects</Link>
-                            <Link href={"/testimonials"}>Testimonials</Link>
-                            <Link href={"#"}>Login</Link>
-                            <Link href={"#"}>Sign Up</Link>
-                        </ul>
+                    <p><FaBars ></FaBars></p>
+                    <ul className={styles.mobMenuLinks}>
+                        <Link href={"/services"}>Services</Link>
+                        <Link href={"/projects"}>Srojects</Link>
+                        <Link href={"/testimonials"}>Testimonials</Link>
+                        <Link href={"#"}>Login</Link>
+                        <Link href={"#"}>Sign Up</Link>
+                    </ul>
                 </div>
             </div>
         </nav>
