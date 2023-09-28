@@ -631,6 +631,81 @@ box-shadow: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
 }
 
 /***********************************************
+ Services Start
+ *********************************************/
+
+.servicesArea {
+    padding-top:66px;
+    padding-bottom: 95px;
+}
+
+.servicesWrapper {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 31px;
+}
+
+.servicesSingle {
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.09);
+    padding: 40px 30px;
+}
+
+.servicesSingleBox {
+
+}
+
+.servicesSingleBox h2{
+    color: #000;
+
+font-size: 26px;
+
+font-weight: 600;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.servicesSingleBox p{
+    color: #9D9D9D;
+
+font-size: 16px;
+
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+}
+
+.heroAreaRightTop {
+    width:100%;
+}
+.heroAreaRightTop img:first-child{
+    /* width:70%;
+    height:auto; */
+    width: 408px;
+    height: 271px;
+}
+
+.heroAreaRightTop img:nth-child(2){
+    width: 180px;
+height: 271px;
+}
+
+
+.heroAreaRightBottom img:first-child{
+    /* width:70%;
+    height:auto; */
+    width: 246px;
+    height: 164px;
+}
+
+.heroAreaRightBottom img:nth-child(2){
+    width: 345px;
+    height: 164px;
+}
+
+/***********************************************
             Media query
  *********************************************/
 
@@ -745,6 +820,42 @@ box-shadow: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
     }
     
 
+    /* test */
+    .heroAreaRightTop img:first-child{
+        /* width:70%;
+        height:auto; */
+        width: fit-content;
+        height: auto;
+    }
+    
+    .heroAreaRightTop img:nth-child(2){
+        width: fit-content;
+        height: auto;
+    }
+
+    .heroAreaRight {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .heroAreaRightBottom img:first-child{
+        width: fit-content;
+        height: auto;
+    }
+    
+    .heroAreaRightBottom img:nth-child(2){
+        width: fit-content;
+        height: auto;
+    }
+
+    .heroArea .content {
+        flex-direction: column;
+    }
+
+    .heroAreaRightTop, .heroAreaRightBottom {
+        justify-content: center;
+    }
+
  }
 
 
@@ -752,6 +863,9 @@ box-shadow: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
    Media Queries - SMall Screens 
 ***************************************************/
 @media screen and (max-width: 600px) {
+    .heroArea {
+        padding-top: 90px;
+    }
     .heroArea .content {
         flex-direction: column-reverse;
     }
@@ -810,6 +924,12 @@ box-shadow: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
 
     .teamBox {
         flex-direction: column;
+    }
+
+
+
+    .heroArea .heroAreaRightTop, .heroArea .heroAreaRightBottom {
+        display: none;
     }
     
 

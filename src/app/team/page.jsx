@@ -5,7 +5,7 @@ import Team from "@/components/Team";
 const Page = () => {
     return (
         <div>
-            <Breadcrumb></Breadcrumb>
+            <Breadcrumb title="Team" href="/team"></Breadcrumb>
             <Team></Team>
             <Subscribe></Subscribe>
         </div>
