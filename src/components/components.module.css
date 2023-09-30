@@ -754,6 +754,37 @@ height: 164px;
 
 
 /***********************************************
+ All Projects Start
+ *********************************************/
+
+ .allProjectsArea {
+    padding-top:67px;
+    padding-bottom:81px;
+ }
+
+ .allProjectsArea .servicesSingleImageBox {
+    margin-top: 0px;
+ }
+
+ .allProjectsArea .servicesSingleBox {
+    margin-top: 30px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************
             Media query
  *********************************************/
 
@@ -927,6 +958,13 @@ height: 164px;
     .servicesSingleImages2 img:nth-child(2){
         width: 100%;
         height: auto;
+    }
+
+
+    /* allProjectsArea */
+
+    .allProjectsArea .content {
+        justify-content: center;
     }
     
 
