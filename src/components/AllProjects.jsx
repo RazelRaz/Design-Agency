@@ -20,6 +20,7 @@ const AllProjects = () => {
                             </div>
                             <div className={styles.servicesSingleBox}>
                                 <h2>Build & Launch without problems</h2>
+                                <p>Backend Developer</p>
                             </div>
 
                         </div>

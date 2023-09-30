@@ -773,16 +773,49 @@ height: 164px;
 
 
 
+/***********************************************
+            testimonials Area
+ *********************************************/
 
+.testimonialsArea {
+    padding-top:66px;
+    padding-bottom: 95px;
+}
 
+.testimonialsArea .servicesSingleImageBox img {
+    width: 100px;
+    height: 100px;
+}
 
+.testimonialsArea p.servicesSingleBoxPtwo {
+    color: #000;
 
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
 
+.testimonialsArea .servicesSingleImageBox {
+    margin-top: 0px;
+ }
 
+ .testimonialsArea .servicesSingleBox h2 {
+    margin-top: 26px;
+ }
 
+ .testimonialsArea .servicesWrapper {
+    grid-template-columns: repeat(3,1fr);
+ }
 
+ .testimonialsArea .servicesSingle {
+    text-align:center;
+ }
 
-
+ .testimonialsArea .servicesSingleImageBox img{
+    margin: 0 auto;
+ }
 
 /***********************************************
             Media query
@@ -966,6 +999,12 @@ height: 164px;
     .allProjectsArea .content {
         justify-content: center;
     }
+
+
+    /* testimonials Area */
+    .testimonialsArea .servicesWrapper {
+        grid-template-columns: 1fr 1fr;
+     }
     
 
  }
@@ -1043,6 +1082,12 @@ height: 164px;
     .heroArea .heroAreaRightTop, .heroArea .heroAreaRightBottom {
         display: none;
     }
+
+
+    /* testimonials Area */
+    .testimonialsArea .servicesWrapper {
+        grid-template-columns: 1fr;
+     }
     
 
 }
