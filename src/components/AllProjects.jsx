@@ -2,7 +2,17 @@ import styles from './components.module.css'
 import Image from 'next/image';
 import AllPorject from '../../public/images/allproject.png'
 
-const AllProjects = () => {
+async function getData(){
+    let res = await fetch(process.env.BASE_URL+"api/AllProject")
+
+    if(!res.ok){
+        throw new Error("AllProject Area Project Calling Failed")
+    }
+    return res.json();
+}
+
+const AllProjects = async () => {
+    const data = await getData()
     return (
         <div className={styles.allProjectsArea}>
             <div className={styles.container}>
@@ -13,50 +23,29 @@ const AllProjects = () => {
                 <div className={styles.content}>
                     <div className={styles.servicesWrapper}>
                         
-                        <div className={styles.servicesSingle}>
+                            {
+                                data.map((singleData, i) => {
+                                    return (
+                                        
+                                        <div className={styles.servicesSingle}>
                             
                             <div className={styles.servicesSingleImageBox}>
-                                <Image src={AllPorject}  alt="All Porject" />
+                                <img src={singleData['image']} alt="" srcset="" />
                             </div>
                             <div className={styles.servicesSingleBox}>
-                                <h2>Build & Launch without problems</h2>
+                                <h2>{singleData['title']}</h2>
                                 <p>Backend Developer</p>
                             </div>
 
                         </div>
 
-                        <div className={styles.servicesSingle}>
-                            
-                            <div className={styles.servicesSingleImageBox}>
-                                <Image src={AllPorject}  alt="All Porject" />
-                            </div>
-                            <div className={styles.servicesSingleBox}>
-                                <h2>Build & Launch without problems</h2>
-                            </div>
+                                    )
+                                })
+                            }
 
-                        </div>
+                        
 
-                        <div className={styles.servicesSingle}>
-                            
-                            <div className={styles.servicesSingleImageBox}>
-                                <Image src={AllPorject}  alt="All Porject" />
-                            </div>
-                            <div className={styles.servicesSingleBox}>
-                                <h2>Build & Launch without problems</h2>
-                            </div>
-
-                        </div>
-
-                        <div className={styles.servicesSingle}>
-                            
-                            <div className={styles.servicesSingleImageBox}>
-                                <Image src={AllPorject}  alt="All Porject" />
-                            </div>
-                            <div className={styles.servicesSingleBox}>
-                                <h2>Build & Launch without problems</h2>
-                            </div>
-
-                        </div>
+                        
 
                     </div>
                 </div>
