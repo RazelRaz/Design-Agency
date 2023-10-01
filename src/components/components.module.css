@@ -744,9 +744,7 @@ border-radius: 10px;
     justify-content: center;
 }
 
-.servicesSingleImages img{
-   /* max-width:100% */
-}
+
 
 .servicesSingleImages img:first-child{
     width: 358px;
@@ -775,7 +773,10 @@ height: 164px;
     height: 263px;
 }
 
-
+.servicesSingleImages img{
+    /* max-width:100% */
+    margin-bottom: 10px;
+ }
 
 
 /***********************************************
@@ -1021,14 +1022,23 @@ height: 164px;
 
     .servicesSingleImages2 img:first-child{
         width: 100%;
-        height: auto;
+
     }
     
     .servicesSingleImages2 img:nth-child(2){
         width: 100%;
-        height: auto;
+
     }
 
+    .servicesSingleImages img{
+   /* max-width:100% */
+   
+}
+
+.servicesSingleImages, .servicesSingleImages2 {
+    display: grid;
+    grid-gap: 22px;
+}
 
     /* allProjectsArea */
 

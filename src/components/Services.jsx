@@ -5,7 +5,21 @@ import ServiceOne from '../../public/images/service1.png'
 import ServiceTwo from '../../public/images/service2.png'
 import ServiceThree from '../../public/images/service3.png'
 
-const Services = () => {
+
+async function getData(){
+    let res = await fetch(process.env.BASE_URL+"api/AllService")
+
+    if(!res.ok){
+        throw new Error("AllService Area Project Calling Failed")
+    }
+    return res.json();
+}
+
+
+const Services = async () => {
+
+    const data = await getData()
+
     return (
         <div className={styles.servicesArea}>
             <div className={styles.container}>
@@ -16,77 +30,41 @@ const Services = () => {
                 <div className={styles.content}>
                     <div className={styles.servicesWrapper}>
 
-                        <div className={styles.servicesSingle}>
-                            <div className={styles.servicesSingleBox}>
-                                <h2>Build & Launch without problems</h2>
-                                <p>Increase your team’s productivity and save time with a bot that answers and fields customer inquiries</p>
-                            </div>
-                            <div className={styles.servicesSingleImageBox}>
-                                <div className={styles.servicesSingleImages}>
-                                    <Image src={ServiceOne}  alt="Service" />
-                                    <Image src={ServiceTwo}  alt="Service" />
-                                </div>
 
-                                <div className={styles.servicesSingleImages2}>
-                                    <Image src={ServiceThree}  alt="Service" />
-                                    <Image src={ServiceThree}  alt="Service" />
-                                </div>
-                            </div>
-                        </div>
+                            {
+                                data.map((singleData, i) => {
+                                    return (
+                                        
+                                        <div className={styles.servicesSingle}>
+                                            <div className={styles.servicesSingleBox}>
+                                                <h2>{singleData['title']}</h2>
+                                                <p>{singleData['des']}</p>
+                                            </div>
+                                            <div className={styles.servicesSingleImageBox}>
+                                                <div className={styles.servicesSingleImages}>
+                                                    <img src={singleData['image1']} alt="" srcset="" />
+                                                    <img src={singleData['image2']} alt="" srcset="" />
+                                                </div>
 
-                        <div className={styles.servicesSingle}>
-                            <div className={styles.servicesSingleBox}>
-                                <h2>Build & Launch without problems</h2>
-                                <p>Increase your team’s productivity and save time with a bot that answers and fields customer inquiries</p>
-                            </div>
-                            <div className={styles.servicesSingleImageBox}>
-                                <div className={styles.servicesSingleImages}>
-                                    <Image src={ServiceOne}  alt="Service" />
-                                    <Image src={ServiceTwo}  alt="Service" />
-                                </div>
+                                                <div className={styles.servicesSingleImages2}>
+                                                <img src={singleData['image3']} alt="" srcset="" />
+                                                <img src={singleData['image4']} alt="" srcset="" />
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                <div className={styles.servicesSingleImages2}>
-                                    <Image src={ServiceThree}  alt="Service" />
-                                    <Image src={ServiceThree}  alt="Service" />
-                                </div>
-                            </div>
-                        </div>
+                                    )
+                                })
+                            }
 
-                        <div className={styles.servicesSingle}>
-                            <div className={styles.servicesSingleBox}>
-                                <h2>Build & Launch without problems</h2>
-                                <p>Increase your team’s productivity and save time with a bot that answers and fields customer inquiries</p>
-                            </div>
-                            <div className={styles.servicesSingleImageBox}>
-                                <div className={styles.servicesSingleImages}>
-                                    <Image src={ServiceOne}  alt="Service" />
-                                    <Image src={ServiceTwo}  alt="Service" />
-                                </div>
 
-                                <div className={styles.servicesSingleImages2}>
-                                    <Image src={ServiceThree}  alt="Service" />
-                                    <Image src={ServiceThree}  alt="Service" />
-                                </div>
-                            </div>
-                        </div>
+                        
 
-                        <div className={styles.servicesSingle}>
-                            <div className={styles.servicesSingleBox}>
-                                <h2>Build & Launch without problems</h2>
-                                <p>Increase your team’s productivity and save time with a bot that answers and fields customer inquiries</p>
-                            </div>
-                            <div className={styles.servicesSingleImageBox}>
-                                <div className={styles.servicesSingleImages}>
-                                    <Image src={ServiceOne}  alt="Service" />
-                                    <Image src={ServiceTwo}  alt="Service" />
-                                </div>
+                        
 
-                                <div className={styles.servicesSingleImages2}>
-                                    <Image src={ServiceThree}  alt="Service" />
-                                    <Image src={ServiceThree}  alt="Service" />
-                                </div>
-                            </div>
-                        </div>
+                        
+
+                        
 
                     </div>
                 </div>
