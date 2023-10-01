@@ -363,9 +363,15 @@ object-fit: contain;
     width: 605px;
 }
 
-.featuredProjectRightTop, .featuredProjectRightBottom {
+/* .featuredProjectRightTop, .featuredProjectRightBottom {
     display: flex;
     gap: 31px;
+} */
+
+.featuredProjectRightTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:30px;
 }
 
 .featuredProjectARea p{
@@ -383,6 +389,12 @@ object-fit: contain;
 .featuredProjectRight {
     margin-top: -55px;
 
+}
+
+.featuredProjectRightTop img  {
+    width: 287px;
+height: 188px;
+border-radius: 20px;
 }
 
 
@@ -686,11 +698,13 @@ margin-top: 20px;
     height:auto; */
     width: 408px;
     height: 271px;
+    border-radius: 10px;
 }
 
 .heroAreaRightTop img:nth-child(2){
     width: 180px;
 height: 271px;
+border-radius: 10px;
 }
 
 
@@ -699,11 +713,13 @@ height: 271px;
     height:auto; */
     width: 246px;
     height: 164px;
+    border-radius: 10px;
 }
 
 .heroAreaRightBottom img:nth-child(2){
     width: 345px;
     height: 164px;
+    border-radius: 10px;
 }
 
 .servicesSingleImageBox {

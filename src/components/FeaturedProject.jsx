@@ -3,7 +3,21 @@ import Image from 'next/image';
 import FProject1 from '../../public/images/fproject.jpg'
 import FProject2 from '../../public/images/fproject2.png'
 
-const FeaturedProject = () => {
+async function getData(){
+    let res = await fetch(process.env.BASE_URL+"api/FeaturedProject")
+
+    if(!res.ok){
+        throw new Error("Featured Project Calling Failed")
+    }
+    return res.json();
+}
+
+
+const FeaturedProject = async  () => {
+
+    const data = await getData()
+
+
     return (
         <div className={styles.featuredProjectARea}>
             <div className={styles.container}>
@@ -21,18 +35,30 @@ const FeaturedProject = () => {
                     </div>
                     <div className={styles.featuredProjectRight}>
                         <div className={styles.featuredProjectRightTop}>
-                            <div className={styles.singlefeaturedProject}>
+
+                            {
+                                data.map((singleData, i) => {
+                                    return (
+                                        <div key={i} className={styles.singlefeaturedProject}>
+                                            <img src={singleData['image']} alt="" srcset="" />
+                                            <p>App Design - June 20, 2022</p>
+                                            <h3>{singleData['title']}</h3>
+                                        </div>
+                                    )
+                                })
+                            }
+
+                            
+
+
+
+                            {/* <div className={styles.singlefeaturedProject}>
                                 <Image src={FProject2} alt="Active" />
                                 <p>App Design - June 20, 2022</p>
                                 <h3>App Redesign</h3>
-                            </div>
-                            <div className={styles.singlefeaturedProject}>
-                                <Image src={FProject2} alt="Active" />
-                                <p>App Design - June 20, 2022</p>
-                                <h3>App Redesign</h3>
-                            </div>
+                            </div> */}
                         </div>
-                        <div className={styles.featuredProjectRightBottom}>
+                        {/* <div className={styles.featuredProjectRightBottom}>
                             <div className={styles.singlefeaturedProject}>
                                 <Image src={FProject2} alt="Active" />
                                 <p>App Design - June 20, 2022</p>
@@ -43,7 +69,7 @@ const FeaturedProject = () => {
                                 <p>App Design - June 20, 2022</p>
                                 <h3>App Redesign</h3>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

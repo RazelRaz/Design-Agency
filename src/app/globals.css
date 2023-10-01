@@ -1,5 +1,10 @@
 /* Default CSS */
 
+body {
+  font-family: 'Poppins', sans-serif;
+
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;

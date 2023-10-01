@@ -7,26 +7,38 @@ import HeroFour from '../../public/images/hero4.png'
 import Link from 'next/link';
 
 
-const Hero = () => {
+async function getData(){
+    let res = await fetch(process.env.BASE_URL+"api/HeroList")
+
+    if(!res.ok){
+        throw new Error("Hero Calling Failed")
+    }
+    return res.json();
+}
+
+
+const Hero = async () => {
+    const data = await getData()
+
     return (
         <div className={styles.heroArea}>
             <div className={styles.container}>
                 <div className={styles.content}>
                     <div className={styles.heroAreaLeft}>
-                        <h1>Increase Your Customers Loyalty and Satisfaction</h1>
-                        <p>We help businesses like yours earn more customers, standout from competitors, make more money</p>
+                        <h1>{data['title']}</h1>
+                        <p>{data['description']}</p>
                         <div className={styles.heroBtn}>
                             <Link href={'/services'}>Get Started </Link>
                         </div>
                     </div>
                     <div className={styles.heroAreaRight}>
                         <div className={styles.heroAreaRightTop}>
-                            <Image src={HeroOne}  alt="Hero" />
-                            <Image src={HeroTwo}  alt="Hero" />
+                            <img src={data['image1']} alt="" srcset="" />
+                            <img src={data['image2']} alt="" srcset="" />
                         </div>
                         <div className={styles.heroAreaRightBottom}>
-                            <Image src={HeroThree}  alt="Hero" />
-                            <Image src={HeroFour}  alt="Hero" />
+                            <img src={data['image3']} alt="" srcset="" />
+                            <img src={data['image4']} alt="" srcset="" />
                         </div>
                     </div>
                 </div>
