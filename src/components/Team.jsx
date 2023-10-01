@@ -3,8 +3,19 @@ import Link from 'next/link';
 import { FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
 import Image from 'next/image';
 import TeamImg from '../../public/images/team.jpg'
+import { async } from './../app/testimonials/layout';
 
-const Team = () => {
+async function getData(){
+    let res = await fetch(process.env.BASE_URL+"api/TeamList")
+
+    if(!res.ok){
+        throw new Error("TeamList Area Project Calling Failed")
+    }
+    return res.json();
+}
+
+const Team = async () => {
+    const data = await getData()
     return (
         <div className={styles.teamArea}>
             <div className={styles.container}>
@@ -15,10 +26,14 @@ const Team = () => {
                 <div className={styles.content}>
                     <div className={styles.teamBox}>
 
-                        <div className={styles.singleTeam}>
+                            {
+                                data.map((singleData, i) => {
+                                    return (
+                                        
+                                        <div className={styles.singleTeam}>
                             <div className={styles.singlewrapper}>
                                 <div className={styles.teamSocial}>
-                                    <Image src={TeamImg} alt="Team" />
+                                    <img src={singleData['image']} alt="" srcset="" />
                                     <ul>
                                         <li><Link href={'/'}><FaFacebookF /></Link></li>
                                         <li><Link href={'/'}><FaTwitter /></Link></li>
@@ -28,41 +43,17 @@ const Team = () => {
                                 
                             </div>
                             <div className={styles.teamAuthor}>
-                                <h2>Devon Lane</h2>
+                                <h2>{singleData['name']}</h2>
                             </div>
                         </div>
+                                    )
+                                })
+                            }
+
+                        
 
 
-                        <div className={styles.singleTeam}>
-                            <div className={styles.singlewrapper}>
-                                <div className={styles.teamSocial}>
-                                    <Image src={TeamImg} alt="Team" />
-                                    <ul>
-                                        <li><Link href={'/'}><FaFacebookF /></Link></li>
-                                        <li><Link href={'/'}><FaTwitter /></Link></li>
-                                        <li><Link href={'/'}><FaInstagram /></Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className={styles.teamAuthor}>
-                                <h2>Devon Lane</h2>
-                            </div>
-                        </div>
-                        <div className={styles.singleTeam}>
-                            <div className={styles.singlewrapper}>
-                                <div className={styles.teamSocial}>
-                                    <Image src={TeamImg} alt="Team" />
-                                    <ul>
-                                        <li><Link href={'/'}><FaFacebookF /></Link></li>
-                                        <li><Link href={'/'}><FaTwitter /></Link></li>
-                                        <li><Link href={'/'}><FaInstagram /></Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className={styles.teamAuthor}>
-                                <h2>Devon Lane</h2>
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>

@@ -588,9 +588,12 @@ breadcrumb Area
 }
 
 .teamBox {
-    display: flex;
-    gap: 32px;
+    /* display: flex;
+    gap: 32px; */
     padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:32px;
 }
 
 
@@ -640,6 +643,12 @@ box-shadow: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
 .teamAuthor {
     text-align: center;
     padding: 48px 11px;
+}
+
+.teamSocial img {
+    width: 392px;
+height: 387px;
+border-radius: 20px 20px 0px 0px;
 }
 
 /***********************************************
@@ -923,9 +932,15 @@ height: 164px;
         flex-wrap: wrap;
     }
     
-    .featuredProjectRightTop, .featuredProjectRightBottom {
-        justify-content: center;
+
+    .featuredProjectRightTop {
+        grid-template-columns: 1fr;
+        margin-top: 27px;
     }
+
+    /* .featuredProjectRightTop, .featuredProjectRightBottom {
+        justify-content: center;
+    } */
 
     .featuredProjectRight {
         margin-top: 50px;
@@ -952,13 +967,18 @@ height: 164px;
     .heroAreaRightTop img:first-child{
         /* width:70%;
         height:auto; */
-        width: fit-content;
-        height: auto;
+
+        /* width: fit-content;
+        height: auto; */
+
+        width: 100%;
     }
     
     .heroAreaRightTop img:nth-child(2){
-        width: fit-content;
-        height: auto;
+        /* width: fit-content;
+        height: auto; */
+
+        width: 100%;
     }
 
     .heroAreaRight {
@@ -1021,6 +1041,18 @@ height: 164px;
     .testimonialsArea .servicesWrapper {
         grid-template-columns: 1fr 1fr;
      }
+
+     .teamBox {
+        /* display: flex;
+        gap: 32px; */
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .teamArea .content {
+        justify-content: center;
+    }
     
 
  }
@@ -1091,6 +1123,11 @@ height: 164px;
 
     .teamBox {
         flex-direction: column;
+    }
+
+    .teamSocial img  {
+        width: 100%;
+        height: auto;
     }
 
 
