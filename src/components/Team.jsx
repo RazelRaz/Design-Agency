@@ -35,9 +35,9 @@ const Team = async () => {
                                 <div className={styles.teamSocial}>
                                     <img src={singleData['image']} alt="" srcset="" />
                                     <ul>
-                                        <li><Link href={'/'}><FaFacebookF /></Link></li>
-                                        <li><Link href={'/'}><FaTwitter /></Link></li>
-                                        <li><Link href={'/'}><FaInstagram /></Link></li>
+                                        <li><Link href={singleData['facebook']}><FaFacebookF /></Link></li>
+                                        <li><Link href={singleData['twitter']}><FaTwitter /></Link></li>
+                                        <li><Link href={singleData['instagram']}><FaInstagram /></Link></li>
                                     </ul>
                                 </div>
                                 
